@@ -24,7 +24,6 @@ public class Player : MonoBehaviour
 
     private void OnUseStartPerformed(InputAction.CallbackContext obj)
     {
-        print("yes");
         if (touchedTrigger != null && !touchedTrigger.isHoldTrigger)
         {
             touchedTrigger.Use();
@@ -67,7 +66,6 @@ public class Player : MonoBehaviour
         if (touchedTrigger != null && touchedTrigger.isHoldTrigger)
         {
             touchedTrigger.Use();
-            print("YES");
         }
     }
 }

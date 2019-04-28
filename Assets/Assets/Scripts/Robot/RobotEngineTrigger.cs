@@ -5,9 +5,10 @@ using UnityEngine;
 public class RobotEngineTrigger : RobotTrigger
 {
     private bool isActivated = false;
+    public RobotEngine engine;
 
     public override void Use()
     {
-        robot.isEngineActive = isActivated = !isActivated;
+        engine.IsEngineActive = isActivated = !isActivated;
     }
 }

@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHoldTrigger: 0
-  engine: {fileID: 0}
+  engine: {fileID: 1242076608}
 --- !u!65 &24818729
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -8,11 +8,7 @@ public class RobotEngine : MonoBehaviour
     public float radius;
 
     private Robot robot;
-    public bool IsEngineActive
-    {
-        get { return IsEngineActive;}
-        set { particles.gameObject.SetActive(value); IsEngineActive = value; }
-    }
+    private bool isEngineActive;
 
     public float movementSpeed;
     public Vector2 direction;
@@ -33,7 +29,7 @@ public class RobotEngine : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (IsEngineActive)
+        if (isEngineActive)
         {
             Vector2 dir = direction * movementSpeed;
             transform.position += new Vector3(dir.x, 0 , dir.y);
@@ -57,5 +53,17 @@ public class RobotEngine : MonoBehaviour
         pos.y = centerRobot.z + radius * yAngle;
         
         transform.position = new Vector3(pos.x, 0, pos.y);
+    }
+
+    public void SetIsEngineActive(bool isEngineActive)
+    {
+        particles.gameObject.SetActive(isEngineActive);
+        
+        this.isEngineActive = isEngineActive;
+    }
+
+    public bool GetIsEngineActive()
+    {
+        return isEngineActive;
     }
 }

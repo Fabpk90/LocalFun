@@ -9,6 +9,7 @@ public class RobotEngineTrigger : RobotTrigger
 
     public override void Use()
     {
-        engine.IsEngineActive = isActivated = !isActivated;
+        isActivated = !isActivated;
+        engine.SetIsEngineActive(isActivated);
     }
 }
